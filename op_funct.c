@@ -9,20 +9,20 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *new = NULL;
-	(void)line_number;
+stack_t *new = NULL;
+(void)line_number;
 
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-		print_error("malloc");
+new = malloc(sizeof(stack_t));
+if (new == NULL)
+print_error("malloc");
 
-	new->n = data;
-	new->prev = NULL;
-	new->next = *stack;
+new->n = data;
+new->prev = NULL;
+new->next = *stack;
 
-	if (*stack != NULL)
-		(*stack)->prev = new;
-	*stack = new;
+if (*stack != NULL)
+(*stack)->prev = new;
+*stack = new;
 }
 
 /**
@@ -34,12 +34,12 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current = *stack;
-	(void)line_number;
+stack_t *current = *stack;
+(void)line_number;
 
-	while (current != NULL)
-	{
-		printf("%d\n", current->n);
-		current = current->next;
-	}
+while (current != NULL)
+{
+printf("%d\n", current->n);
+current = current->next;
+}
 }

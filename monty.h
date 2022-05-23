@@ -56,5 +56,7 @@ void free_all(char *line, FILE *fl, stack_t *top);
 void free_dlistint(stack_t *head);
 int is_number(char *str);
 int data;
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **head, unsigned int line_number);
 
 #endif

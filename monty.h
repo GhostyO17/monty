@@ -58,5 +58,6 @@ int is_number(char *str);
 int data;
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **head, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -98,7 +98,7 @@ instruction_t get_instruction(char *opcode, int line_number,
 char *line, FILE *fl, stack_t *top)
 {
 instruction_t instructions[] = {{"push", push}, {"pall", pall}, 
-{"pint", pint}, {"pop", pop},};
+{"pint", pint}, {"pop", pop}, {"swap", swap}};
 int length = 0, i = 0;
 
 length = (sizeof(instructions) / sizeof(instruction_t));

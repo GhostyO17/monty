@@ -88,3 +88,24 @@ free(current);
 }
 
 }
+
+/**
+ * swap - swaps the first two elements of the stack
+ * @stack: pointer to the top of stack
+ * @line_number: line instruction
+ */
+void swap(stack_t **stack, unsigned int line_number)
+{
+stack_t *current = *stack;
+int top, previous;
+
+if (*stack == NULL || (*stack)->next == NULL)
+{
+fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+exit(EXIT_FAILURE);
+}
+top = current->n;
+previous = current->next->n;
+current->next->n = top;
+current->n = previous;
+}
